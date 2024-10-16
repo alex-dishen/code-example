@@ -1,0 +1,159 @@
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+
+.production_panel_wrapper {
+  position: relative;
+}
+
+.production_item {
+  margin-bottom: 8px;
+  padding: 12px;
+  position: relative;
+  display: grid;
+  min-height: 90px;
+  z-index: 2;
+  grid-template-areas: 'details controls actions';
+  grid-template-columns: auto minmax(auto, 500px) 45px;
+  gap: 16px;
+  transition: background-color 0.2s;
+
+  &:hover {
+    border: 1px solid #0851fe;
+  }
+
+  &[data-is-additional='true'] {
+    background-color: #f7fafe;
+    margin-bottom: 0px;
+    margin-top: 8px;
+  }
+
+  &[data-is-dropdown-open='true'] {
+    border: 1px solid #0851fe;
+  }
+}
+
+.title_container {
+  display: grid;
+  grid-template-columns: minmax(1px, auto);
+  max-width: 100%;
+  width: 100%;
+}
+
+.details {
+  grid-area: details;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.controls {
+  grid-area: controls;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.actions {
+  grid-area: actions;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.title {
+  font-weight: 600;
+  line-height: 23px;
+  color: #211d2b;
+}
+
+.left_line {
+  &::before {
+    content: '';
+    z-index: 0;
+    position: absolute;
+    display: block;
+    height: 12px;
+    width: 100%;
+    top: calc(50% - 12px);
+    left: -20px;
+
+    border-left: 1.8px dashed #c8cbcf;
+    border-bottom: 1.8px dashed #c8cbcf;
+
+    border-bottom-left-radius: 8px;
+  }
+}
+
+.badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  padding: 2px 6px;
+  border-radius: 8px;
+  transition: 200ms;
+
+  &.new {
+    border: 1.2px solid #3ed296;
+    color: #3ed296;
+
+    svg * {
+      stroke: unset;
+    }
+  }
+}
+
+.clear_big_road_line {
+  position: absolute;
+  background: #f1f5f9;
+  z-index: 0;
+  width: 23px;
+  height: 100%;
+  top: 40px;
+  left: -22px;
+
+  &[data-is-additional='true'] {
+    background-color: white;
+  }
+}
+
+.tooltip {
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    max-width: none;
+    margin: 5px 0px !important;
+    padding: 8px !important;
+  }
+}
+
+.warning_wrapper {
+  cursor: pointer;
+  &:hover {
+    .badge {
+      background-color: #ffe3d9;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.deadline_expired_wrapper {
+  cursor: pointer;
+  &:hover {
+    .badge {
+      background-color: #ffd7d7;
+      border: 1px solid transparent;
+    }
+  }
+}
+
+.inner_container {
+  position: relative;
+  flex: 1;
+}

@@ -1,0 +1,215 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.actions {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.filters {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.additional_controls {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  flex-wrap: nowrap;
+  flex-shrink: 0;
+}
+
+.department {
+  display: flex;
+  align-items: 'flex-start';
+  gap: 8px;
+
+  svg {
+    flex-shrink: 0;
+    height: 14px;
+    width: 14px;
+    margin-top: 3px;
+
+    path {
+      stroke: #5c668c;
+    }
+  }
+
+  .department_colRight {
+    color: #5c668c;
+  }
+  .department_path {
+    color: #8891b3;
+    line-height: 1.2;
+    margin-top: 2px;
+  }
+}
+
+.responsible {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  .avatar_holder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+
+    .avatar {
+      height: 24px;
+      width: 24px;
+    }
+  }
+}
+
+.chip {
+  align-self: flex-start;
+  padding: 12px 0px;
+  border-radius: 8px;
+  border: 1px solid #76b9f3;
+}
+
+.skeleton_container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  span {
+    transform: none;
+  }
+}
+
+.skeleton {
+  display: flex;
+  gap: 8px;
+}
+
+.production_status {
+  div,
+  span {
+    transition: all 200ms;
+
+    span {
+      padding: 2px;
+      border-radius: 4px;
+    }
+  }
+
+  &[data-status='To_Do']:hover div,
+  &[data-status='Stopped']:hover div,
+  &[data-status='In_Progress']:hover div,
+  &[data-status='Done']:hover div,
+  &[data-status='From_Stock']:hover div,
+  &[data-status='Canceled']:hover div {
+    * {
+      stroke: #fff;
+    }
+  }
+
+  &[data-status='To_Do']:hover div {
+    color: #878b92;
+
+    span {
+      background-color: #878b92;
+    }
+  }
+
+  &[data-status='Stopped']:hover div {
+    color: #fc7070;
+
+    span {
+      background-color: #fc7070;
+    }
+  }
+
+  &[data-status='In_Progress']:hover div {
+    color: #7894ff;
+
+    span {
+      background-color: #7894ff;
+    }
+  }
+
+  &[data-status='Done']:hover div,
+  &[data-status='From_Stock']:hover div,
+  &[data-status='Canceled']:hover div {
+    color: #c3df50;
+
+    span {
+      background-color: #c3df50;
+    }
+  }
+}
+
+.priorities {
+  div,
+  span {
+    transition: all 200ms;
+
+    span {
+      border-radius: 4px;
+    }
+  }
+
+  &:hover div {
+    * {
+      fill: #fff;
+    }
+  }
+
+  &[data-status='Lowest']:hover div,
+  &[data-status='Highest']:hover div {
+    * {
+      stroke: #fff;
+    }
+  }
+
+  &[data-status='Lowest']:hover div {
+    color: #afc4d7;
+
+    span {
+      background-color: #afc4d7;
+    }
+  }
+
+  &[data-status='Low']:hover div {
+    color: #cfd8dc;
+
+    span {
+      background-color: #cfd8dc;
+    }
+  }
+
+  &[data-status='Medium']:hover div {
+    color: #ffcd1e;
+
+    span {
+      background-color: #ffcd1e;
+    }
+  }
+
+  &[data-status='High']:hover div {
+    color: #ec407a;
+
+    span {
+      background-color: #ec407a;
+    }
+  }
+
+  &[data-status='Highest']:hover div {
+    color: #ff7d7d;
+
+    span {
+      background-color: #ff7d7d;
+    }
+  }
+}

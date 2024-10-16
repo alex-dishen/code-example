@@ -1,0 +1,50 @@
+.header {
+  margin: 20px 0 16px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+
+  .row {
+    gap: 4px;
+    display: flex;
+    height: 40px;
+
+    .badge {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 40px;
+      border-radius: 8px;
+      transition: 200ms;
+
+      .text {
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 100%; /* 18px */
+      }
+    }
+  }
+
+  > .row {
+    gap: 12px;
+  }
+
+  span {
+    font-size: 24px;
+    align-self: center;
+    padding-bottom: 2px;
+  }
+}
+
+.tooltip {
+  & > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    max-width: none;
+    margin: 5px 0px !important;
+    padding: 8px !important;
+  }
+}

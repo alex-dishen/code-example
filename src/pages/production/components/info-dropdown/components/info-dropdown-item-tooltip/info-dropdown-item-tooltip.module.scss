@@ -1,0 +1,37 @@
+.title_row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &::before {
+    content: '';
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  > span {
+    white-space: nowrap;
+  }
+  > b {
+    white-space: nowrap;
+    font-weight: 600;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.ellipsis {
+  max-width: 1000px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.solid {
+  flex-shrink: 0;
+}

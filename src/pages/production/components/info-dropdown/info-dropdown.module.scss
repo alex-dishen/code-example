@@ -1,0 +1,136 @@
+.menu_container {
+  :global(.MuiPaper-root) {
+    max-width: 875px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 2px 5px 32px 0px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.button {
+  height: 22px;
+  min-width: 44px;
+}
+
+.info_container {
+  .components_history_container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 12px;
+  }
+
+  .components_history {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    color: #437bff;
+
+    svg path {
+      stroke: #437bff;
+    }
+
+    &:hover {
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+
+  .header {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 16px;
+    margin-bottom: 12px;
+
+    &_container {
+      display: flex;
+      padding: 4px 6px;
+      align-items: center;
+      gap: 6px;
+      border-radius: 6px;
+      background: #eef1fc;
+    }
+  }
+
+  .border {
+    border-bottom: 1px solid #ebeef0;
+    margin-bottom: 12px;
+  }
+
+  .body {
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    gap: 16px;
+
+    .left_container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .items_container {
+      display: flex;
+      flex-direction: column;
+      gap: 6px;
+    }
+
+    .item_title {
+      color: #878b92;
+      font-size: 14px;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    .right_container {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+  }
+}
+
+.header_item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 6px;
+  border-radius: 6px;
+  font-size: 13px;
+  max-height: 28px;
+  background: #eef1fc;
+
+  &_value {
+    font-weight: 600;
+    font-size: 13px;
+    color: #000;
+  }
+
+  &_title {
+    font-size: 13px;
+    color: #000;
+  }
+}
+
+.red_badge {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 8px;
+  border-radius: 8px;
+  background-color: #ffe4e4;
+  min-height: 37px;
+  color: #fc7070;
+  font-size: 14px;
+}
+
+.icon_wrapper {
+  display: grid;
+  place-items: center;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}

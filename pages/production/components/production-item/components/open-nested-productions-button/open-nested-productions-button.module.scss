@@ -1,0 +1,12 @@
+.collapse_button {
+  svg {
+    transition: all 250ms ease-in-out;
+    transform: rotate(-90deg);
+    margin-left: 2px;
+  }
+  &_expanded {
+    svg {
+      transform: rotate(0deg);
+    }
+  }
+}

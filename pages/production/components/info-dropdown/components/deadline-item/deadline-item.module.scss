@@ -1,0 +1,141 @@
+.menu_container {
+  :global(.MuiPaper-root) {
+    max-width: 451px;
+    width: 100%;
+    padding: 16px;
+    border-radius: 12px;
+    background: #fff;
+    box-shadow: 2px 5px 32px 0px rgba(0, 0, 0, 0.06);
+  }
+}
+
+.menu_body {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.date_and_time {
+  display: flex;
+  gap: 24px;
+}
+
+.date_picker {
+  min-width: unset;
+  :global(.MuiDayCalendar-slideTransition) {
+    min-height: 250px;
+  }
+  :global(.MuiDateCalendar-root) {
+    height: unset;
+    width: unset;
+  }
+  :global(.MuiDayCalendar-weekDayLabel) {
+    width: 39px;
+    color: #141414;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  :global(.MuiPickersDay-root) {
+    width: 39px;
+    height: 39px;
+    font-size: 14px;
+    &:focus {
+      background-color: #437bff;
+      color: #fff;
+    }
+  }
+  :global(.Mui-selected) {
+    background-color: #437bff;
+    color: #fff;
+    &:hover {
+      background-color: #437bff;
+    }
+  }
+  .date_action_bar {
+    display: none;
+  }
+  .date_switch_view {
+    display: none;
+  }
+  .date_header {
+    margin-top: 0px;
+    padding-left: 12px;
+  }
+  .date_label {
+    color: #141414;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  .date_button {
+    width: 29px;
+    padding: 4px;
+    border-radius: 5px;
+    background: #dae3ff;
+    &:hover {
+      background-color: rgba(0, 0, 0, 0.04);
+    }
+  }
+  .date_button:first-child {
+    margin-right: 4px;
+  }
+}
+
+.time_selector {
+  border-radius: 9px;
+  height: 325px;
+  width: auto;
+  background: rgba(245, 248, 255, 0.7);
+  border-bottom: unset;
+  :global(.Mui-selected) {
+    background-color: #437bff;
+    color: #fff;
+    &:hover {
+      background-color: #437bff;
+    }
+  }
+  > ul {
+    width: 47px;
+    max-height: 100%;
+    > li {
+      width: 39px;
+      height: 38px;
+      color: #050505;
+      font-weight: 500;
+      line-height: 157%;
+      border-radius: 8px;
+    }
+  }
+  > ul:last-child {
+    border-left: unset;
+  }
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.title_row {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  &::before {
+    content: '';
+    height: 2px;
+    width: 2px;
+    border-radius: 50%;
+    background-color: black;
+    margin-right: 5px;
+    margin-left: 10px;
+  }
+  > span {
+    white-space: nowrap;
+  }
+  > b {
+    white-space: nowrap;
+    font-weight: 600;
+  }
+}
